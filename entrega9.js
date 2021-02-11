@@ -1,13 +1,14 @@
-function mostrar(evt){
-    var inputUno = document.getElementById("nombre").value.toLowerCase();
+
+  function mostrar() {
+      var inputUno = document.getElementById("nombre").value.toLowerCase();
     var inputDos = document.getElementById("pass").value.toLowerCase();
     
     
     
     
-    mostrar.addEventListener('click', function(evt){
-    
-        if(inputDos.value === 'clapier'){
+    boton.addEventListener('click', mostrar())
+
+       if(inputDos.value === 'clapier'){
     
             console.log('el campo contraseña es obligatorio')
             evt.preventDefault();
@@ -26,13 +27,23 @@ function mostrar(evt){
           console.log('El nombre del usuario es demasiado largo')
             evt.preventDefault();
             return false;
-    
         }
-    
-    
-    if(inputUno.value = true) {
+     if(inputUno.value = true) {
          document.getElementById("saludo").innerHTML= "Usuario Correcto"
+      }
+    else {document.getElementById("saludo").innerHTML= "Usuario incorrecto"}}
+
+
     
-    
-    }
-    else { document.getElementById("saludo").innerHTML= "Usuario incorrecto"}
+// document
+// .getElementById("boton-toto")
+// .addEventListener("click", saludarALosCoders);
+
+// function saludarALosCoders(event) {
+// if(event.target.value.length < 4){
+//   alert("La contraseña debe tener mas de 3 caracteres");
+// }
+// console.log("funciona");
+// document
+//   .getElementById("boton-toto")
+//   .removeEventListener("click", saludarALosCoders, false);
